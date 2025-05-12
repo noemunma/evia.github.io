@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Fuera Bicho!</title>
+  <link rel="stylesheet" href="css/juegos.css">
+  <link rel="icon" href="imagenes/celula1.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  
+</head>
+<body class="arcade1">
+  <div id="inicio" class="pantalla visible">
+    <div class="bicho">
+      <button class="btn-arcade1" onclick="iniciarJuego()">Jugar</button>
+      <h1>¡Fuera Bicho!</h1>
+      <p>¡Haz clic o toca las células antes de que escapen!</p>    
+      <a href="entretenimiento.html" class="btn-salir">
+       <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      </a>
+    </div>
+    
+
+    
+  </div>
+
+  <div id="pantalla-juego" class="pantalla">
+    <div class="barra-arcade1">      
+      <div>Intentos: <span id="vidas">5</span></div>
+      <div>Nivel: <span id="nivel">1</span></div>
+    </div>
+    <div id="juego"></div>
+    <div class="barra-arcade1"> 
+      <div>Puntos: <span id="puntos">0</span></div>
+      <a href="arcade1.html" class="exit">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      </a>
+    </div>    
+  </div>
+
+  <div id="nivel-superado" class="pantalla">
+    <h2>¡Tu sistema inmunológico se fortalece!</h2>
+    <button class="btn-arcade1" onclick="continuarJuego()">Siguiente nivel</button>
+  </div>
+
+  <div id="fin" class="pantalla">
+    <div class="bicho">
+      <h2>Fin del juego</h2>
+      <p>Puntuación final: <span id="puntos-finales"></span></p>
+      <button class="btn-arcade1" onclick="reiniciarJuego()">Reintentar</button>
+      <a href="entretenimiento.html" class="btn-salir">
+       <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      </a>
+
+    </div>
+
+  </div>
+
+  <script src="arcade1.js"></script>
+</body>
+</html>

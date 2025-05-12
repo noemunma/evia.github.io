@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ruta Sana</title>
+  <meta name="description" content="EVIA">
+  <meta name="author" content="Noelia Munoz">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/juegos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="imagenes/obstaculo.jpeg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barrio&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body class="logica1">
+  <div id="inicio" class="pantalla visible">
+    <h1>Ruta Sana</h1>
+    <p>Evita las células sanas y llega al tumor para completar el nivel.</p>
+    <button class="btn-logica1" onclick="iniciarJuego()">Jugar</button>
+      <a href="entretenimiento.html" class="btn-salir">
+       <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      </a> 
+  </div>
+
+
+  <div id="pantalla-juego" class="pantalla">
+    <div class="barra-logica1">      
+      <div>Puntos: <span id="puntos">0</span></div>
+      <div>Nivel: <span id="nivel">1</span></div>
+      <a href="logica1.html" class="exit">
+       <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      </a>
+    </div>
+      
+    <div class="laberinto" id="laberinto"></div>
+    <div id="controles-direccion">
+      <div class="fila">
+        <button class="direccion-logica1" onclick="mover(0, -1)">
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+        <button class="direccion-logica1" onclick="mover(-1, 0)">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button class="direccion-logica1" onclick="mover(1, 0)">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <button class="direccion-logica1" onclick="mover(0, 1)">
+          <i class="fa-solid fa-arrow-down"></i>
+        </button>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div id="nivel-superado" class="pantalla">
+    <h2>¡La medicina está llegando donde debe!</h2>
+    <button class="btn-logica1" onclick="siguienteNivel()">Siguiente Nivel</button>
+  </div>
+
+  <div id="fin" class="pantalla">
+    <h2>Fin del juego</h2>
+    <p>¡Has fallado al tocar una célula sana!</p>
+    <button class="btn-logica1" onclick="reiniciarJuego()">Reintentar</button>
+    <a href="entretenimiento.html" class="btn-salir">
+     <i class="fa-solid fa-arrow-right-from-bracket"></i>
+    </a>
+  </div>
+
+  <script src="logica1.js"></script>
+
+</body>
+</html>

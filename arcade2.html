@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OncoBreaker</title>
+  <link rel="stylesheet" href="css/juegos.css">
+  <link rel="icon" href="imagenes/celulamala.jpeg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="arcade2">
+  <div id="inicio" class="pantalla visible">
+    <div class="intro-arcade2">
+      <button class="btn-arcade2" onclick="iniciarJuego()">Jugar</button>
+      <a href="entretenimiento.html" class="btn-salir">
+       <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      </a> 
+    </div>
+  </div>  
+
+  <div id="pantalla-juego" class="pantalla">
+    <div class="barra-arcade2">
+      <div>Puntos: <span id="puntos">0</span></div>
+      <div>Nivel: <span id="nivel">1</span></div>
+      <a href="logica1.html" class="exit">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      </a>
+    </div>
+    <div id="juegoarcade2">
+      <div id="pelota" class="pelota"></div>
+      <div id="barra" class="barra"></div>
+    </div>
+    <div id="controles-direccion">
+      <div class="fila">
+        <button class="direccion-arcade2" onclick="mover(-1, 0)">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button class="direccion-arcade2" onclick="mover(1, 0)">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>      
+    </div>
+
+  </div>
+
+  <div id="nivel-superado" class="pantalla">
+    <h2>¡El tratamiento está funcionando!</h2>
+    <button onclick="continuarJuego()">Siguiente nivel</button>
+    <a href="entretenimiento.html" class="btn-salir">
+     <i class="fa-solid fa-arrow-right-from-bracket"></i>
+    </a>
+  </div>
+
+  <div id="fin" class="pantalla">
+    <h2>Fin del juego</h2>
+    <p>Puntuación final: <span id="puntos-finales"></span></p>
+    <button class="btn-arcade2" onclick="reiniciarJuego()">Reintentar</button>
+    <a href="entretenimiento.html" class="btn-salir">
+      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+    </a>
+  </div>
+
+  <script src="arcade2.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Memory Power</title>
+  <meta name="description" content="EVIA">
+  <meta name="author" content="Noelia Munoz">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/juegos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="imagenes/cartas/reverso.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> <script src="https://kit.fontawesome.com/e4de55b846.js" crossorigin="anonymous"></script>
+</head>
+<body class="logica2">
+  <div id="inicio" class="pantalla visible">
+    <div class="iniciologica2">
+      <button class="btn-logica2" onclick="iniciarJuego()">Jugar</button>
+      <a href="entretenimiento.html" class="btn-salir">
+       <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      </a> 
+    </div>
+  </div>
+
+  <div id="pantalla-juego" class="pantalla">
+    <div class="barra-logica2">            
+      <div>Nivel: <span id="nivel">1</span></div>
+    </div>
+    <div class="grid" id="grid"></div>    
+    <div class="barra-logica2">      
+      <div><span id="puntos">0</span></div>
+      <a href="logica2.html" class="exit">
+       <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      </a>
+    </div> 
+  </div>
+  <div id="nivel-superado" class="pantalla">
+    <h2>¡Tu mente es tu mejor medicina!</h2>
+    <button class="barra-logica2" onclick="siguienteNivel()">Siguiente Nivel</button>
+  </div>
+
+  <div id="fin" class="pantalla">
+    <h2>¡Juego completado!</h2>
+    <p>¡Excelente memoria!</p>
+    <button onclick="reiniciarJuego()">Reintentar</button>
+    <a href="entretenimiento.html" class="btn-salir">
+     <i class="fa-solid fa-arrow-right-from-bracket"></i>
+    </a>
+  </div>
+
+  <script src="logica2.js"></script>
+
+</body>
+</html>
