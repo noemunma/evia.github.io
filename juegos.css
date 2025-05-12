@@ -1,0 +1,663 @@
+
+/* ESTILOS GENERALES */ 
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;    
+}
+
+.pantalla {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  width: 100vw;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.visible {
+  display: flex;
+}
+
+
+buttonexit {
+  padding: 10px 20px;
+  background-color: #3A3745;
+  color: #20e0b7;
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+/* FONDOS PARA CADA JUEGO */
+
+.arcade1 {
+  background-image: url('/imagenes/backjuego11.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.arcade2 {
+  background-image: url('/imagenes/backjuego2.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logica1{
+  background-image: url('/imagenes/backjuego3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logica2 {
+  background-image: url('/imagenes/backjuego4.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*FONDOS PARA CADA PANTALLA*/
+
+#juego {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 1000px;
+  margin: auto;
+  background-size: cover;  
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.btn-salir {
+  background-color:  rgb(3, 3, 3);
+  color: rgb(247, 247, 247);
+  font-size: 10px;
+  border: 2px solid rgb(247, 247, 247);
+  border-radius: 10px;
+  padding: 10px 10px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn-salir:hover {
+  background-color: rgb(126, 124, 125);
+}
+
+
+/* ARCADE 1 */ 
+
+.bicho {
+  position: relative;
+  width: 100%;
+  max-width: 3000px;
+  height: 2500px;
+  background-image: url('/imagenes/playarcade1.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px 300px 20px;
+  color: rgb(190, 32, 85);  
+  text-align: center;
+}
+
+.btn-arcade1 {
+  background-color:  rgb(190, 32, 85);
+  color: rgb(247, 247, 247);
+  font-size: 18px;
+  border: 2px solid rgb(247, 247, 247);
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn-arcade1:hover {
+  background-color: rgb(231, 88, 136);
+}
+
+.barra-arcade1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 10px 20px;
+  background-color:  rgb(190, 32, 85);
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: "Barrio", system-ui;
+}
+
+
+.celula {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url('/imagenes/celula1.png');
+  background-size: cover;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: aparecer 1.2s ease-in-out;
+}
+
+@keyframes aparecer {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
+
+.exit {
+  font-size: 20px;
+  color: white;  
+  padding: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+
+/*ARCADE 2*/
+
+.intro-arcade2 {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 2000px;
+  background-image: url('/imagenes/pantallaarcade2.jpeg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 300px 20px 100px 20px;
+  color: rgb(245, 75, 208);  
+  text-align: center;
+}
+
+
+.btn-arcade2 {
+  background-color:  rgb(245, 75, 208);
+  color: rgb(247, 247, 247);
+  font-size: 18px;
+  border: 2px solid rgb(247, 247, 247);
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn-arcade2:hover {
+  background-color: rgb(231, 88, 136);
+}
+
+
+.barra-arcade2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  background-image: url('/imagenes/barraazul.jpeg');
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: "Barrio", system-ui; 
+}
+
+#juegoarcade2 {
+  position: relative;
+  width: 480px;
+  height: 480px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.7);
+}
+
+.pelota, .barra, .ladrillo {
+  position: absolute;
+}
+.pelota {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(147, 20, 220);
+  border-radius: 50%;
+}
+
+.barra {
+  width: 125px;
+  height: 20px;
+  background-color:  rgb(245, 75, 208);
+  bottom: 0;
+  border: 4px solid rgb(255, 250, 254);
+  box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.7);
+}
+ 
+.ladrillo {
+  width: 50px;
+  height: 50px;
+  background-image: url('/imagenes/celulamala.jpeg');
+  background-size: cover;
+}
+
+.direccion-arcade2 {
+  width: 60px;
+  height: 60px;
+  background-image: url('/imagenes/backjuego2.jpeg');
+  background-size: cover;
+  background-position: center;
+  border: 2px solid rgb(247, 247, 247);
+  border-radius: 10px;
+  font-size: 1.8rem;
+  color: rgb(247, 247, 247);
+  margin: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+.direccion-arcade2 i {
+  pointer-events: none;
+}
+
+
+/* LOGICA 1 */ 
+
+.barra-logica1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 10px 20px;
+  background-image: url('/imagenes/backjuego3.png');  
+  background-position: center;
+  border-radius: 8px;
+  border: 3px solid white;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;  
+}
+
+
+.laberinto {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  grid-template-rows: repeat(10, 30px);
+  gap: 2px;
+  margin: 20px auto;
+  width: max-content;
+  background-color: #182de6;
+  border: 4px;
+  border-radius: 12px;
+}
+.celda {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.medicamento { background-color: #b618e6;; border-radius: 50%; }
+
+.objetivo { 
+  background-image: url('/imagenes/celulamala.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.camino {
+  background-image: url('/imagenes/cuadricula.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.obstaculo {
+  background-image: url('/imagenes/obstaculo.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+
+.fila {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;  
+}
+
+
+.btn-logica1 {
+  background-image: url('/imagenes/backjuego3.png');
+  color: rgb(247, 247, 247);
+  font-size: 18px;
+  border: 2px solid rgb(247, 247, 247);
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn-logica1:hover {
+  background-color: rgb(231, 88, 136);
+}
+
+.direccion-logica1 {
+  width: 60px;
+  height: 60px;
+  background-image: url('/imagenes/backjuego3.png');
+  background-size: cover;
+  background-position: center;
+  border: 2px solid rgb(247, 247, 247);
+  border-radius: 10px;
+  font-size: 1.8rem;
+  color: rgb(247, 247, 247);
+  margin: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+
+.direccion-logica1 i {
+  pointer-events: none;
+}
+
+
+/* LOGICA 2 */ 
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.barra-logica2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 10px 20px;
+  background-image: url('/imagenes/cartas/backjuego4.jpeg');
+  border-radius: 8px;
+  color: rgb(245, 75, 208);
+  font-weight: bold;  
+  font-size: 24px;  
+}
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.iniciologica2 {
+  position: relative;
+  width: 100%;
+  height: 100dvh; 
+  background-image: url('/imagenes/pantallalogica2.jpeg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.btn-logica2 {
+  background-color:  rgb(54, 245, 245);
+  color: rgb(247, 247, 247);
+  font-size: 18px;
+  border: 2px solid rgb(247, 247, 247);
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn-logica2:hover {
+  background-color: rgb(245, 75, 208);
+}
+
+
+/*RELAX 1*/
+
+.relax1 {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100dvh;
+  width: 100vw;
+}
+
+ button {
+  font-size: 16px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgb(247, 247, 247);
+  border-radius: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/*RELAX 2*/
+
+.relax2 {
+  margin: 0;
+  height: 100dvh;
+  background: linear-gradient(135deg, #908db0, #f5f5f5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Poiret One", sans-serif;
+  text-align: center;
+  transition: background 0.5s ease-in-out;
+  gap: 50px;
+  overflow: hidden;
+  position: relative; /* Añadimos esto al contenedor */
+}
+
+#circle {
+  width: 150px;
+  height: 150px;
+  background-color: #67cfc2;
+  border-radius: 50%;
+  animation: breathe 8s infinite;
+  transform-origin: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+#message {
+  font-size: 2rem;
+  color: #003344;
+  padding: 20px;
+  position: relative; 
+  z-index: 2;
+}
+
+@keyframes breathe {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.3); } /* Inspira */
+  50% { transform: scale(1.3); } /* Mantén el Aire */
+  75% { transform: scale(1); }   /* Espira */
+  100% { transform: scale(1); }
+}
+
+/* PARA APP */ 
+
+@media (max-width: 767px) {
+
+/* GENERALES */
+
+* {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body, html {
+  font-size: 16px;
+}
+
+.pantalla, .bicho, .relax1, .relax2 {
+  height: 100dvh;
+}
+
+
+button,
+.btn-arcade1,
+.btn-arcade2,
+.btn-logica1,
+.btn-logica2,
+.direccion-logica1,
+.direccion-arcade2 {
+  font-size: 16px;
+  padding: 5px;
+}
+
+#juego {
+  height: 100%;
+  max-height: 100dvh;
+}
+
+
+
+#juego,
+.barra-arcade1,
+.barra-arcade2,
+.barra-logica1,
+.barra-logica2 {
+  max-width: 90vw;
+  font-size: 1.2rem;
+}
+
+/* BOTONES DIRECCION */
+.direccion-logica1,
+.direccion-arcade2 {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+}
+
+
+/*ARCADE 1 MOVIL*/
+  .bicho {
+    height: 100dvh; 
+    background-image: url('/imagenes/backjuego1.jpeg');   
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+  }
+
+  .bicho button,
+  .bicho h1,
+  .bicho p,
+  .bicho a {
+    margin: 10px 0;
+  }
+
+
+/*ARCADE 2 MOVIL*/
+
+.intro-arcade2 {
+  height: auto;
+  min-height: 100dvh;
+}
+
+/* Recuadro del juego arcade2 más flexible */
+#juegoarcade2 {
+  width: 90vw;
+  aspect-ratio: 1 / 1;
+  max-width: 480px;
+}
+
+/* Pelota y barra escala */
+.pelota {
+  width: 16px;
+  height: 16px;
+}
+.barra {
+  width: 90px;
+  height: 16px;
+}
+
+
+/* LOGICA 1 MOVIL */
+
+.laberinto {
+  grid-template-columns: repeat(10, 24px);
+  grid-template-rows: repeat(10, 24px);
+}
+
+.celda {
+  width: 24px;
+  height: 24px;
+}
+
+/* LOGICA 2 MOVIL */
+
+.grid {
+  grid-template-columns: repeat(4, 60px);
+  gap: 6px;
+}
+
+
+
+
+/* RELAX 2 MOVIL */
+.relax2 {
+  padding: 20px;
+  gap: 30px;
+}
+
+#circle {
+  width: 120px;
+  height: 120px;
+  margin: 30px 0;
+}
+
+
+}
